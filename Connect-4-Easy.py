@@ -30,6 +30,7 @@ def checkwin(ab):
 win=0  
 board=[['.', '.', '.' ,'.', '.', '.' ,'.'],['.', '.', '.' ,'.', '.', '.' ,'.'],['.', '.', '.' ,'.', '.', '.' ,'.'],['.', '.', '.' ,'.', '.', '.' ,'.'],['.', '.', '.' ,'.', '.', '.' ,'.'],['.', '.', '.' ,'.', '.', '.' ,'.']]
 def callAi(t):
+    #callAi(t) makes a move from a column 1-7 without much consideration of winning
     k=0 
     while(k==0):
         c=random.randint(1,7)
@@ -48,6 +49,7 @@ def callAi(t):
             board.reverse()                       
             k=1   
 def GameOn():
+    #GameOn() is the mid portion of the game i.e filling up the board and displaying it
     t=0
     words= "Choose whether you would like to be player 1 or player 2(1 or 2): "
     for char in words:
@@ -100,6 +102,7 @@ def GameOn():
             break
         t=t+1;
 def startGame() :
+    #startGame() gives the pre-game instructions
     words = "Greetings Stranger(s)! "
     #Experimental Typing
     for char in words:
